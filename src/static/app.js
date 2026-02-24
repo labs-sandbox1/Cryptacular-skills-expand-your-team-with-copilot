@@ -559,9 +559,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <button class="share-button share-twitter" data-activity="${name}" data-platform="twitter" aria-label="Share on Twitter" title="Share on Twitter">
           𝕏
         </button>
-        <button class="share-button share-linkedin" data-activity="${name}" data-platform="linkedin" aria-label="Share on LinkedIn" title="Share on LinkedIn">
-          in
-        </button>
         <button class="share-button share-email" data-activity="${name}" data-platform="email" aria-label="Share via Email" title="Share via Email">
           ✉
         </button>
@@ -863,11 +860,6 @@ Visit ${shareUrl} to learn more and register!`;
         shareLink = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
           shareText
         )}&url=${encodeURIComponent(shareUrl)}`;
-        break;
-      case "linkedin":
-        shareLink = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-          shareUrl
-        )}`;
         break;
       case "email":
         shareLink = `mailto:?subject=${emailSubject}&body=${emailBody}`;

@@ -720,15 +720,6 @@ footer {
   background: linear-gradient(135deg, #3eb1f5, #1DA1F2);
 }
 
-.share-linkedin {
-  background: linear-gradient(135deg, #0077B5, #00669c);
-  color: white;
-}
-
-.share-linkedin:hover {
-  background: linear-gradient(135deg, #0e8acc, #0077B5);
-}
-
 .share-email {
   background: linear-gradient(135deg, #EA4335, #d33426);
   color: white;

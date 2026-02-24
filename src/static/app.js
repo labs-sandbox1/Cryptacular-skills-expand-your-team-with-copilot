@@ -834,8 +834,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const formattedSchedule = formatSchedule(activity);
     const shareText = `Check out ${activityName} at Mergington High School! ${activity.description}`;
     const shareUrl = window.location.href;
-    const emailSubject = `Join ${activityName} at Mergington High School`;
-    const emailBody = `Hi there!%0A%0AI wanted to share this exciting activity with you:%0A%0A${activityName}%0A${activity.description}%0A%0ASchedule: ${formattedSchedule}%0A%0AVisit ${shareUrl} to learn more and register!`;
+    const emailSubject = `Join ${encodeURIComponent(activityName)} at Mergington High School`;
+    const emailBody = `Hi there!%0A%0AI wanted to share this exciting activity with you:%0A%0A${encodeURIComponent(
+      activityName
+    )}%0A${encodeURIComponent(
+      activity.description
+    )}%0A%0ASchedule: ${encodeURIComponent(
+      formattedSchedule
+    )}%0A%0AVisit ${encodeURIComponent(shareUrl)} to learn more and register!`;
 
     let shareLink = "";
 

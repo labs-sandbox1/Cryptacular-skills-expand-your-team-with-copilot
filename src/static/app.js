@@ -539,11 +539,12 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
     // Create difficulty badge if difficulty_level exists
-    const difficultyBadgeHtml = details.difficulty_level && validDifficulties.includes(details.difficulty_level) ? `
-      <span class="difficulty-badge difficulty-${details.difficulty_level.toLowerCase()}">
-        ${details.difficulty_level}
-      </span>
-    ` : '';
+    let difficultyBadgeHtml = '';
+    if (details.difficulty_level && validDifficulties.includes(details.difficulty_level)) {
+      const level = details.difficulty_level;
+      const levelClass = level.toLowerCase();
+      difficultyBadgeHtml = `<span class="difficulty-badge difficulty-${levelClass}">${level}</span>`;
+    }
 
     // Create capacity indicator
     const capacityIndicator = `

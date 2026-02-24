@@ -46,6 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Authentication state
   let currentUser = null;
 
+  // Valid difficulty levels
+  const validDifficulties = ['Beginner', 'Intermediate', 'Advanced'];
+
   // Time range mappings for the dropdown
   const timeRanges = {
     morning: { start: "06:00", end: "08:00" }, // Before school hours
@@ -536,7 +539,6 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
     // Create difficulty badge if difficulty_level exists
-    const validDifficulties = ['Beginner', 'Intermediate', 'Advanced'];
     const difficultyBadgeHtml = details.difficulty_level && validDifficulties.includes(details.difficulty_level) ? `
       <span class="difficulty-badge difficulty-${details.difficulty_level.toLowerCase()}">
         ${details.difficulty_level}

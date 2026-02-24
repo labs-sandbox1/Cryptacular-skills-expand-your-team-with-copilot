@@ -703,7 +703,7 @@ footer {
 #dark-mode-toggle {
   position: absolute;
   top: 10px;
-  right: 200px;
+  right: 130px;
   background-color: rgba(255, 255, 255, 0.2);
   border: none;
   border-radius: 20px;
@@ -728,7 +728,7 @@ footer {
 /* Responsive adjustments for dark mode toggle */
 @media (max-width: 767px) {
   #dark-mode-toggle {
-    right: 150px;
+    right: 100px;
     padding: 4px 8px;
     font-size: 0.75rem;
   }
